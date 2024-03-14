@@ -27,8 +27,6 @@ contract FundRaisingContract is ERC20MintBurnTransferContract {
         finishTime = block.timestamp + (_time * 1 minutes);
     }
 
-    // 나중에 컨트랙트 상에서 전송해야 하므로 이더 받는 함수
-    receive() external payable {}
 
     // 분배 함수
     function distributeFund() external {
