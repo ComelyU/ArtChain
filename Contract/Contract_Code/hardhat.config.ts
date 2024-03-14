@@ -1,5 +1,8 @@
 require("@nomiclabs/hardhat-waffle");
 import ArtcoinAbi from "./artifacts/contracts/ArtCoin.sol/ArtcoinContract.json"
+// 환경변수 설정
+import dotenv from "dotenv";
+dotenv.config();
 
 task("check", "Check contract amounts", async () => {
   const [deployer] = await ethers.getSigners();
@@ -17,13 +20,13 @@ task("check", "Check contract amounts", async () => {
 });
 
 const privateKey =
-  "b4c1f0efd30a4bac98df9a4d9ab1d6545f528c5d55e49d9ef751daf7a5e8980a";
+  process.env.MAIN_WALLET_PRIVATE_KEY;
 
 module.exports = {
   defaultNetwork: "sepolia",
   networks: {
     sepolia: {
-      url: "https://sepolia.infura.io/v3/fcf1b848b122474ba6b758aec7c7f725",
+      url: process.env.SEPOLIA_URL,
       accounts: [privateKey],
     },
   },
