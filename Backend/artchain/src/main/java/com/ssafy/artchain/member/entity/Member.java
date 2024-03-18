@@ -1,10 +1,12 @@
 package com.ssafy.artchain.member.entity;
 
+import com.ssafy.artchain.connectentity.InvestmentLog;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -67,4 +69,7 @@ public class Member {
 
   @Column(name = "UPDATED_AT")
   private LocalDateTime updatedAt;
+
+  @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
+  private List<InvestmentLog> investmentLogs;
 }
