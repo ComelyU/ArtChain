@@ -8,6 +8,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { LoginPage } from "./pages/LoginPage";
 import { MyPage } from "./pages/MyPage";
 import { CoinCharge } from "./pages/CoinCharge";
+import Market from "./pages/Market";
+import { Theme } from "./theme/Theme";
 
 function App() {
   const Desktop = ({ children }: { children: ReactNode }) => {
@@ -22,7 +24,7 @@ function App() {
   return (
     <>
       {/* 데스크탑 버전 */}
-      <ChakraProvider>
+      <ChakraProvider theme={Theme}>
         <Desktop>
           <div style={{ backgroundColor: "#001a38", height: "100dvh" }}>
             <div
@@ -58,13 +60,14 @@ function App() {
         </Desktop>
       </ChakraProvider>
       {/* 모바일 */}
-      <ChakraProvider>
+      <ChakraProvider theme={Theme}>
         <Mobile>
           <div style={{ backgroundColor: "white", height: "100dvh" }}>
             {/* NavBar
           <TopNavBar /> */}
             <BrowserRouter>
               <Routes>
+                
                 {/* 메인페이지 */}
                 <Route path="/" element={<MainPage />} />
 
@@ -81,6 +84,10 @@ function App() {
                 <Route path="/invest-list" element={<InvestList />} />
 
                 {/* 투자  */}
+
+                {/* 마켓  */}
+                <Route path="/market" element={<Market />}></Route>
+
               </Routes>
             </BrowserRouter>
           </div>
