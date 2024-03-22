@@ -6,8 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    // host: "0.0.0.0",
-    host: "j10a708.p.ssafy.io",
+    host: "0.0.0.0",
     // hmr: {
     //   // HMR 연결을 위한 설정
     //   protocol: "wss", // 보안 연결을 위해 'wss' 사용
