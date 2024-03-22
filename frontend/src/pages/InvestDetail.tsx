@@ -16,7 +16,6 @@ export const InvestDetail = () => {
       <InvestDetailHeader />
       <InvestDetailHeaderInfo />
       <InvestDetailBox />
-
       <BottomButtonNavbar text="투자하기" hanldeButton={handleInvest} />
     </div>
   );
