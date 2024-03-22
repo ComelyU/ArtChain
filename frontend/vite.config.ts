@@ -14,5 +14,6 @@ export default defineConfig({
     //   // port: 443, // 서버가 SSL을 사용하여 HTTPS를 통해 접근할 때 사용하는 포트
     //   clientPort: 443,
     // },
+    hmr: false,
   },
 });
