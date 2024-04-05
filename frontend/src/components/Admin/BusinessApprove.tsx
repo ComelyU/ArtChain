@@ -15,7 +15,8 @@ export default function BusinessApprove() {
       // 그 속에 있는 메서드가 정의된 ABI를 이용하기 위함이다.
       const fundingContract = new web3.eth.Contract(
         ReceiveArtCoinContractABI.abi,
-        distributeInfo.fundingContractAddress
+        "0x8A171dee872BbE271E641197e7879464593ADab3"
+        // distributeInfo.fundingContractAddress
       );
 
       const tx = fundingContract.methods.distributeFundWithoutCondition().send({ from: MW });
@@ -24,49 +25,6 @@ export default function BusinessApprove() {
       console.error("거래 처리 중 오류가 발생했습니다.", error);
     }
   };
-
-  // const refund = async () => {
-  //   try {
-  //     // 펀딩할 때 이용할 FundRaisingContract 연결!
-  //     // 그 속에 있는 메서드가 정의된 ABI를 이용하기 위함이다.
-  //     const fundingContract = new web3.eth.Contract(
-  //       ReceiveArtCoinContractABI.abi,
-  //       ReceviceArtCoinContractAddress
-  //     );
-
-  //     const tx = fundingContract.methods
-  //       .refundContributors()
-  //       .send({ from: account });
-  //     console.log((await tx).transactionHash);
-  //   } catch (error) {
-  //     console.error("거래 처리 중 오류가 발생했습니다.", error);
-  //   }
-  // };
-
-  // handle 기업승인버튼
-  // const handleCompany = (
-  //   e: React.ChangeEvent<HTMLSelectElement>,
-  //   comId: number
-  // ) => {
-  //   const value = e.target.value;
-  //   PutSignUpPermissionAxios({ memberId: comId, permissionFlag: value }).then(
-  //     () => {
-  //       setCnt(cnt + 1);
-  //     }
-  //   );
-  // };
-
-  // const handleCompany = (
-  //   e: React.ChangeEvent<HTMLSelectElement>,
-  //   comId: number
-  // ) => {
-  //   const value = e.target.value;
-  //   PutSignUpPermissionAxios({ memberId: comId, permissionFlag: value }).then(
-  //     () => {
-  //       setCnt(cnt + 1);
-  //     }
-  //   );
-  // };
 
   return (
     <>
