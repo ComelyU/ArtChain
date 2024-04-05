@@ -40,8 +40,6 @@ export default function SellHistoryChart() {
     datas.push(res.avgCoinPerPiece);
   });
 
-  console.log(datas)
-
   const datasets = {
     labels: labels,
     datasets: [
