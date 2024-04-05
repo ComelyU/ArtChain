@@ -44,7 +44,7 @@ export default function SellHistoryChart() {
     labels: labels,
     datasets: [
       {
-        data: datas,
+        data: [datas],
         fill: false,
         borderColor: "#014BA0",
       },

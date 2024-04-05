@@ -12,7 +12,6 @@ import {
 // [개인] 나의 조각 드롭다운 조회
 export const getMyPieceDropDown = async (): Promise<GetMyPieceDropDown[]> => {
   const url = `/member/myTrade/dropDown`;
-  console.log(url);
   const response = await localAxios.get(url);
   return response.data.data;
 };
@@ -28,9 +27,7 @@ export const getMyPieceList = async (
     page,
     size,
   })}`;
-  console.log(url);
   const response = await localAxios.get(url);
-  console.log(response);
   return response.data.data;
 };
 
@@ -40,7 +37,6 @@ export const getMyInvestmentHistory = async (
 ): Promise<GetMyInvestmentHistoryResponse> => {
   const { status } = params;
   const url = `/funding/my-list/${status}`;
-  console.log(url);
 
   const response = await localAxios.get(url);
   return response.data.data;
@@ -49,7 +45,6 @@ export const getMyInvestmentHistory = async (
 // 나의 조각 보유량 TOP3 투자 확인
 export const getMyPieceCount = async (): Promise<GetMyPieceCountResponse> => {
   const url = `/pieceowner/podium`;
-  console.log(url);
 
   const response = await localAxios.get(url);
   return response.data.data;

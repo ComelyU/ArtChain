@@ -11,10 +11,6 @@ interface Props {
 export default function Poster({ mainFunding }: Props) {
   const url = `/invest/${mainFunding.id}`;
 
-  useEffect(() => {
-    console.log(mainFunding);
-  }, []);
-
   return (
     <Box my={7} as={Link} to={url}>
       <Box
