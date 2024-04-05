@@ -15,8 +15,7 @@ export default function BusinessApprove() {
       // 그 속에 있는 메서드가 정의된 ABI를 이용하기 위함이다.
       const fundingContract = new web3.eth.Contract(
         ReceiveArtCoinContractABI.abi,
-        "0x8A171dee872BbE271E641197e7879464593ADab3"
-        // distributeInfo.fundingContractAddress
+        distributeInfo.fundingContractAddress
       );
 
       const tx = fundingContract.methods.distributeFundWithoutCondition().send({ from: MW });
