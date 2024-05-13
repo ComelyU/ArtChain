@@ -202,7 +202,7 @@ Scheduler & SSE 구현<br/>UCC 담당
 
 ### 🌐 포팅 매뉴얼
 
-[포팅 매뉴얼 보러가기](https://lab.ssafy.com/s10-blockchain-contract-sub2/S10P22A708/-/blob/master/exec/Porting%20Manual.md?ref_type=heads)
+[포팅 매뉴얼 보러가기](https://github.com/ComelyU/ArtChain/blob/master/exec/Porting%20Manual.md)
 
 ### 💻 서비스 화면
 
